@@ -1,0 +1,10 @@
+{
+  "description": "A premium portfolio site for a full-stack developer, showcasing web and digital product development services tailored for Russian businesses and startups.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
