@@ -1,18 +1,18 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 
 // ============================================================
-// ★ EDITABLE DATA — редактируй здесь, сайт обновится сам
+// в… EDITABLE DATA вЂ” СЂРµРґР°РєС‚РёСЂСѓР№ Р·РґРµСЃСЊ, СЃР°Р№С‚ РѕР±РЅРѕРІРёС‚СЃСЏ СЃР°Рј
 // ============================================================
 
 export const PROJECTS: Project[] = [
   {
     id: "01",
     name: "GARANTO",
-    category: "Страхование · Автомобили",
+    category: "РЎС‚СЂР°С…РѕРІР°РЅРёРµ В· РђРІС‚РѕРјРѕР±РёР»Рё",
     description:
-      "Корпоративный сайт страховой компании с онлайн-расчётом полисов, личным кабинетом клиента и интеграцией с CRM-системой.",
+      "РљРѕСЂРїРѕСЂР°С‚РёРІРЅС‹Р№ СЃР°Р№С‚ СЃС‚СЂР°С…РѕРІРѕР№ РєРѕРјРїР°РЅРёРё СЃ РѕРЅР»Р°Р№РЅ-СЂР°СЃС‡С‘С‚РѕРј РїРѕР»РёСЃРѕРІ, Р»РёС‡РЅС‹Рј РєР°Р±РёРЅРµС‚РѕРј РєР»РёРµРЅС‚Р° Рё РёРЅС‚РµРіСЂР°С†РёРµР№ СЃ CRM-СЃРёСЃС‚РµРјРѕР№.",
     year: "2025",
-    tags: ["Дизайн", "Разработка", "CRM"],
+    tags: ["Р”РёР·Р°Р№РЅ", "Р Р°Р·СЂР°Р±РѕС‚РєР°", "CRM"],
     image:
       "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1600&h=1000&fit=crop&auto=format&q=80",
     href: "#",
@@ -20,11 +20,11 @@ export const PROJECTS: Project[] = [
   {
     id: "02",
     name: "CARSELLER",
-    category: "Автомобили · Digital Platform",
+    category: "РђРІС‚РѕРјРѕР±РёР»Рё В· Digital Platform",
     description:
-      "Маркетплейс автомобилей с умной фильтрацией, сравнением и персональными рекомендациями на основе поведения пользователя.",
+      "РњР°СЂРєРµС‚РїР»РµР№СЃ Р°РІС‚РѕРјРѕР±РёР»РµР№ СЃ СѓРјРЅРѕР№ С„РёР»СЊС‚СЂР°С†РёРµР№, СЃСЂР°РІРЅРµРЅРёРµРј Рё РїРµСЂСЃРѕРЅР°Р»СЊРЅС‹РјРё СЂРµРєРѕРјРµРЅРґР°С†РёСЏРјРё РЅР° РѕСЃРЅРѕРІРµ РїРѕРІРµРґРµРЅРёСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ.",
     year: "2025",
-    tags: ["Платформа", "UI/UX", "Frontend"],
+    tags: ["РџР»Р°С‚С„РѕСЂРјР°", "UI/UX", "Frontend"],
     image:
       "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1600&h=1000&fit=crop&auto=format&q=80",
     href: "#",
@@ -32,16 +32,16 @@ export const PROJECTS: Project[] = [
   {
     id: "03",
     name: "COOKIO",
-    category: "AI · Food · Startup",
+    category: "AI В· Food В· Startup",
     description:
-      "AI-сервис персональных рецептов по списку продуктов. MVP за 6 недель — от концепции до первых платящих пользователей.",
+      "AI-СЃРµСЂРІРёСЃ РїРµСЂСЃРѕРЅР°Р»СЊРЅС‹С… СЂРµС†РµРїС‚РѕРІ РїРѕ СЃРїРёСЃРєСѓ РїСЂРѕРґСѓРєС‚РѕРІ. MVP Р·Р° 6 РЅРµРґРµР»СЊ вЂ” РѕС‚ РєРѕРЅС†РµРїС†РёРё РґРѕ РїРµСЂРІС‹С… РїР»Р°С‚СЏС‰РёС… РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№.",
     year: "2024",
     tags: ["AI", "MVP", "Fullstack"],
     image:
       "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1600&h=1000&fit=crop&auto=format&q=80",
     href: "#",
   },
-  // ← НОВЫЙ ПРОЕКТ: скопируй блок выше и вставь сюда
+  // в†ђ РќРћР’Р«Р™ РџР РћР•РљРў: СЃРєРѕРїРёСЂСѓР№ Р±Р»РѕРє РІС‹С€Рµ Рё РІСЃС‚Р°РІСЊ СЃСЋРґР°
 ];
 
 type Project = {
@@ -149,7 +149,7 @@ function Cursor() {
 // MARQUEE STRIP
 // ============================================================
 function Strip({ items, reverse = false, dim = false }: { items: string[]; reverse?: boolean; dim?: boolean }) {
-  const str = items.join("  ·  ");
+  const str = items.join("  В·  ");
   return (
     <div style={{ overflow: "hidden", borderTop: "1px solid rgba(242,242,242,0.06)", borderBottom: "1px solid rgba(242,242,242,0.06)", padding: "12px 0" }}>
       <div style={{ display: "flex", animation: `ticker${reverse ? "R" : ""} 28s linear infinite`, whiteSpace: "nowrap" }}>
@@ -176,9 +176,9 @@ function Nav() {
 
   const links = [
     { l: "WORK", h: "#work" },
-    { l: "УСЛУГИ", h: "#services" },
-    { l: "ОБО МНЕ", h: "#about" },
-    { l: "КОНТАКТ", h: "#contact" },
+    { l: "РЈРЎР›РЈР“Р", h: "#services" },
+    { l: "РћР‘Рћ РњРќР•", h: "#about" },
+    { l: "РљРћРќРўРђРљРў", h: "#contact" },
   ];
 
   const navLink: React.CSSProperties = {
@@ -198,7 +198,7 @@ function Nav() {
       <div style={{ maxWidth: 1440, margin: "0 auto", padding: "0 48px", height: 66, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
 
         <a href="#" style={{ fontFamily: "'Inter',sans-serif", fontWeight: 900, fontSize: 14, letterSpacing: "0.12em", color: "#F2F2F2", textDecoration: "none" }}>
-          BEDNIN®
+          BEDNINВ®
         </a>
 
         {/* Desktop links */}
@@ -214,9 +214,9 @@ function Nav() {
         <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
           <div className="d-nav" style={{ display: "flex", alignItems: "center", gap: 8, border: "1px solid rgba(242,242,242,0.09)", padding: "7px 14px" }}>
             <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#4ade80", display: "block", animation: "blink 2.5s ease infinite" }} />
-            <span style={{ fontFamily: "'Inter',sans-serif", fontWeight: 500, fontSize: 9, letterSpacing: "0.16em", color: "rgba(242,242,242,0.5)" }}>ОТКРЫТ ДЛЯ ПРОЕКТОВ</span>
+            <span style={{ fontFamily: "'Inter',sans-serif", fontWeight: 500, fontSize: 9, letterSpacing: "0.16em", color: "rgba(242,242,242,0.5)" }}>РћРўРљР Р«Рў Р”Р›РЇ РџР РћР•РљРўРћР’</span>
           </div>
-          <button onClick={() => setOpen(!open)} className="m-burger" aria-label="Меню"
+          <button onClick={() => setOpen(!open)} className="m-burger" aria-label="РњРµРЅСЋ"
             style={{ background: "none", border: "none", padding: 8, display: "none", flexDirection: "column", gap: 5, cursor: "pointer" }}>
             {[0, 1, 2].map(i => (
               <span key={i} style={{
@@ -239,7 +239,7 @@ function Nav() {
             }}>{l.l}</a>
           ))}
           <a href="#contact" onClick={() => setOpen(false)} style={{ fontFamily: "'Inter',sans-serif", fontWeight: 700, fontSize: 10, letterSpacing: "0.14em", color: "#080808", background: "#F2F2F2", padding: "14px 24px", textDecoration: "none" }}>
-            НАЧАТЬ ПРОЕКТ →
+            РќРђР§РђРўР¬ РџР РћР•РљРў в†’
           </a>
         </div>
       )}
@@ -269,11 +269,11 @@ function Hero() {
       {/* Top-right meta */}
       <div style={{ position: "absolute", top: 96, right: 48, textAlign: "right", ...fade(0.7) }}>
         <p style={{ fontFamily: "'Inter',sans-serif", fontWeight: 400, fontSize: 9, letterSpacing: "0.22em", color: "rgba(242,242,242,0.2)", lineHeight: 2.2, margin: 0 }}>
-          FULL-STACK DEVELOPER<br />МОСКВА · 2026
+          FULL-STACK DEVELOPER<br />РњРћРЎРљР’Рђ В· 2026
         </p>
       </div>
 
-      {/* Year stamp — large ghost */}
+      {/* Year stamp вЂ” large ghost */}
       <div style={{ position: "absolute", right: 48, bottom: 80, fontFamily: "'Inter',sans-serif", fontWeight: 900, fontSize: "clamp(80px,12vw,160px)", letterSpacing: "-0.06em", color: "rgba(242,242,242,0.025)", lineHeight: 1, userSelect: "none", pointerEvents: "none" }}>
         2026
       </div>
@@ -285,32 +285,32 @@ function Hero() {
           fontSize: "clamp(54px,10.8vw,152px)", lineHeight: 0.86,
           letterSpacing: "-0.045em", color: "#F2F2F2", margin: "0 0 60px 0",
         }}>
-          САЙТЫ,<br />
-          КОТОРЫЕ{" "}
+          РЎРђР™РўР«,<br />
+          РљРћРўРћР Р«Р•{" "}
           <span style={{ WebkitTextStroke: "2px rgba(242,242,242,0.22)", color: "transparent" }}>
-            ПРОДАЮТ.
+            РџР РћР”РђР®Рў.
           </span>
         </h1>
 
         <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", flexWrap: "wrap", gap: 36 }}>
           <div style={{ ...fade(0.3) }}>
             <div style={{ fontFamily: "'Inter',sans-serif", fontWeight: 500, fontSize: 10, letterSpacing: "0.22em", color: "rgba(242,242,242,0.28)", marginBottom: 16 }}>
-              Сайты · Интерфейсы · Разработка
+              РЎР°Р№С‚С‹ В· РРЅС‚РµСЂС„РµР№СЃС‹ В· Р Р°Р·СЂР°Р±РѕС‚РєР°
             </div>
             <p style={{ fontFamily: "'Inter',sans-serif", fontWeight: 400, fontSize: 16, lineHeight: 1.68, color: "rgba(242,242,242,0.46)", maxWidth: 380, margin: 0 }}>
-              Разрабатываю современные сайты и цифровые продукты для компаний, предпринимателей и стартапов.
+              Р Р°Р·СЂР°Р±Р°С‚С‹РІР°СЋ СЃРѕРІСЂРµРјРµРЅРЅС‹Рµ СЃР°Р№С‚С‹ Рё С†РёС„СЂРѕРІС‹Рµ РїСЂРѕРґСѓРєС‚С‹ РґР»СЏ РєРѕРјРїР°РЅРёР№, РїСЂРµРґРїСЂРёРЅРёРјР°С‚РµР»РµР№ Рё СЃС‚Р°СЂС‚Р°РїРѕРІ.
             </p>
           </div>
 
           <div style={{ display: "flex", flexDirection: "column", gap: 14, alignItems: "flex-end", ...fade(0.45) }}>
             <div style={{ display: "flex", gap: 10, flexWrap: "wrap", justifyContent: "flex-end" }}>
-              <BtnPrimary href="#contact">НАЧАТЬ ПРОЕКТ →</BtnPrimary>
-              <BtnGhost href="#work">СМОТРЕТЬ РАБОТЫ →</BtnGhost>
+              <BtnPrimary href="#contact">РќРђР§РђРўР¬ РџР РћР•РљРў в†’</BtnPrimary>
+              <BtnGhost href="#work">РЎРњРћРўР Р•РўР¬ Р РђР‘РћРўР« в†’</BtnGhost>
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
               <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#4ade80", animation: "blink 2.5s ease infinite" }} />
               <span style={{ fontFamily: "'Inter',sans-serif", fontWeight: 400, fontSize: 9, letterSpacing: "0.18em", color: "rgba(242,242,242,0.3)" }}>
-                СЕЙЧАС БЕРУ НОВЫЕ ПРОЕКТЫ
+                РЎР•Р™Р§РђРЎ Р‘Р•Р РЈ РќРћР’Р«Р• РџР РћР•РљРўР«
               </span>
             </div>
           </div>
@@ -352,7 +352,7 @@ function BtnGhost({ href, children }: { href: string; children: React.ReactNode 
 }
 
 // ============================================================
-// WORK SECTION — полноширинные editorial блоки
+// WORK SECTION вЂ” РїРѕР»РЅРѕС€РёСЂРёРЅРЅС‹Рµ editorial Р±Р»РѕРєРё
 // ============================================================
 function WorkSection() {
   const { ref, on } = useReveal();
@@ -364,14 +364,14 @@ function WorkSection() {
         <div>
           <span style={{ fontFamily: "'Inter',sans-serif", fontWeight: 400, fontSize: 9, letterSpacing: "0.26em", color: "rgba(242,242,242,0.2)", display: "block", marginBottom: 20 }}>SELECTED WORK</span>
           <h2 style={{ fontFamily: "'Inter',sans-serif", fontWeight: 900, fontSize: "clamp(40px,5.5vw,72px)", letterSpacing: "-0.04em", lineHeight: 0.9, color: "#F2F2F2", margin: 0 }}>
-            ИЗБРАННЫЕ<br />РАБОТЫ
+            РР—Р‘Р РђРќРќР«Р•<br />Р РђР‘РћРўР«
           </h2>
         </div>
         <div style={{ textAlign: "right" }}>
           <div style={{ fontFamily: "'Inter',sans-serif", fontWeight: 900, fontSize: 80, letterSpacing: "-0.06em", color: "rgba(242,242,242,0.03)", lineHeight: 1 }}>
             {String(PROJECTS.length).padStart(2, "0")}
           </div>
-          <div style={{ fontFamily: "'Inter',sans-serif", fontWeight: 400, fontSize: 9, letterSpacing: "0.16em", color: "rgba(242,242,242,0.18)" }}>ПРОЕКТА</div>
+          <div style={{ fontFamily: "'Inter',sans-serif", fontWeight: 400, fontSize: 9, letterSpacing: "0.16em", color: "rgba(242,242,242,0.18)" }}>РџР РћР•РљРўРђ</div>
         </div>
       </div>
 
@@ -436,12 +436,12 @@ function ProjectBlock({ project, index }: { project: Project; index: number }) {
             }}
               onMouseEnter={e => { e.currentTarget.style.borderColor = "#F2F2F2"; e.currentTarget.style.letterSpacing = "0.2em"; }}
               onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(242,242,242,0.22)"; e.currentTarget.style.letterSpacing = "0.14em"; }}>
-              СМОТРЕТЬ КЕЙС →
+              РЎРњРћРўР Р•РўР¬ РљР•Р™РЎ в†’
             </a>
           </div>
         </div>
 
-        {/* Image — browser frame */}
+        {/* Image вЂ” browser frame */}
         <div style={{ order: even ? 2 : 1, perspective: "1400px" }} className="proj-img">
           <div style={{
             transform: hov ? (even ? "rotateY(-2.5deg) rotateX(1.5deg) scale(1.01)" : "rotateY(2.5deg) rotateX(1.5deg) scale(1.01)") : "rotateY(0) rotateX(0) scale(1)",
@@ -473,9 +473,9 @@ function ProjectBlock({ project, index }: { project: Project; index: number }) {
 // SERVICES
 // ============================================================
 const SERVICES = [
-  { num: "01", title: "САЙТЫ", en: "Websites", desc: "Корпоративные сайты, лендинги, каталоги и коммерческие проекты. Дизайн и разработка под ключ." },
-  { num: "02", title: "ЦИФРОВЫЕ\nПРОДУКТЫ", en: "Digital Products", desc: "Интерфейсы, MVP и веб-приложения для стартапов и бизнеса. От концепции до запуска." },
-  { num: "03", title: "РАЗРАБОТКА", en: "Development", desc: "Современная frontend и full-stack разработка с готовым production-результатом." },
+  { num: "01", title: "РЎРђР™РўР«", en: "Websites", desc: "РљРѕСЂРїРѕСЂР°С‚РёРІРЅС‹Рµ СЃР°Р№С‚С‹, Р»РµРЅРґРёРЅРіРё, РєР°С‚Р°Р»РѕРіРё Рё РєРѕРјРјРµСЂС‡РµСЃРєРёРµ РїСЂРѕРµРєС‚С‹. Р”РёР·Р°Р№РЅ Рё СЂР°Р·СЂР°Р±РѕС‚РєР° РїРѕРґ РєР»СЋС‡." },
+  { num: "02", title: "Р¦РР¤Р РћР’Р«Р•\nРџР РћР”РЈРљРўР«", en: "Digital Products", desc: "РРЅС‚РµСЂС„РµР№СЃС‹, MVP Рё РІРµР±-РїСЂРёР»РѕР¶РµРЅРёСЏ РґР»СЏ СЃС‚Р°СЂС‚Р°РїРѕРІ Рё Р±РёР·РЅРµСЃР°. РћС‚ РєРѕРЅС†РµРїС†РёРё РґРѕ Р·Р°РїСѓСЃРєР°." },
+  { num: "03", title: "Р РђР—Р РђР‘РћРўРљРђ", en: "Development", desc: "РЎРѕРІСЂРµРјРµРЅРЅР°СЏ frontend Рё full-stack СЂР°Р·СЂР°Р±РѕС‚РєР° СЃ РіРѕС‚РѕРІС‹Рј production-СЂРµР·СѓР»СЊС‚Р°С‚РѕРј." },
 ];
 
 function ServicesSection() {
@@ -486,8 +486,8 @@ function ServicesSection() {
     <section id="services" style={{ padding: "120px 0", borderBottom: "1px solid rgba(242,242,242,0.06)" }}>
       <div style={{ maxWidth: 1440, margin: "0 auto", padding: "0 48px" }}>
         <div ref={ref as React.RefObject<HTMLDivElement>} style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 80, flexWrap: "wrap", gap: 24, opacity: on ? 1 : 0, transform: on ? "none" : "translateY(20px)", transition: "all .8s ease" }}>
-          <span style={{ fontFamily: "'Inter',sans-serif", fontWeight: 400, fontSize: 9, letterSpacing: "0.26em", color: "rgba(242,242,242,0.2)" }}>УСЛУГИ</span>
-          <h2 style={{ fontFamily: "'Inter',sans-serif", fontWeight: 900, fontSize: "clamp(40px,5.5vw,72px)", letterSpacing: "-0.04em", lineHeight: 0.9, color: "#F2F2F2", margin: 0 }}>ЧТО Я ДЕЛАЮ</h2>
+          <span style={{ fontFamily: "'Inter',sans-serif", fontWeight: 400, fontSize: 9, letterSpacing: "0.26em", color: "rgba(242,242,242,0.2)" }}>РЈРЎР›РЈР“Р</span>
+          <h2 style={{ fontFamily: "'Inter',sans-serif", fontWeight: 900, fontSize: "clamp(40px,5.5vw,72px)", letterSpacing: "-0.04em", lineHeight: 0.9, color: "#F2F2F2", margin: 0 }}>Р§РўРћ РЇ Р”Р•Р›РђР®</h2>
         </div>
 
         {SERVICES.map((s, i) => (
@@ -522,8 +522,8 @@ function ServicesSection() {
 function AboutSection() {
   const { ref, on } = useReveal();
   const stats = [
-    { target: 30, suffix: "+", label: "проектов" },
-    { target: 5, suffix: "+", label: "лет опыта" },
+    { target: 30, suffix: "+", label: "РїСЂРѕРµРєС‚РѕРІ" },
+    { target: 5, suffix: "+", label: "Р»РµС‚ РѕРїС‹С‚Р°" },
   ];
 
   return (
@@ -534,27 +534,27 @@ function AboutSection() {
 
         {/* Left */}
         <div>
-          <span style={{ fontFamily: "'Inter',sans-serif", fontWeight: 400, fontSize: 9, letterSpacing: "0.26em", color: "rgba(242,242,242,0.2)", display: "block", marginBottom: 48 }}>ОБО МНЕ</span>
+          <span style={{ fontFamily: "'Inter',sans-serif", fontWeight: 400, fontSize: 9, letterSpacing: "0.26em", color: "rgba(242,242,242,0.2)", display: "block", marginBottom: 48 }}>РћР‘Рћ РњРќР•</span>
           <h2 style={{ fontFamily: "'Inter',sans-serif", fontWeight: 900, fontSize: "clamp(28px,3.8vw,50px)", letterSpacing: "-0.03em", lineHeight: 1.03, color: "#F2F2F2", margin: "0 0 48px 0" }}>
-            Я ДЕЛАЮ ТО,<br />ЧЕМ ХОЧУ<br />ПОЛЬЗОВАТЬСЯ<br />
-            <span style={{ WebkitTextStroke: "1.5px rgba(242,242,242,0.2)", color: "transparent" }}>САМ.</span>
+            РЇ Р”Р•Р›РђР® РўРћ,<br />Р§Р•Рњ РҐРћР§РЈ<br />РџРћР›Р¬Р—РћР’РђРўР¬РЎРЇ<br />
+            <span style={{ WebkitTextStroke: "1.5px rgba(242,242,242,0.2)", color: "transparent" }}>РЎРђРњ.</span>
           </h2>
           <p style={{ fontFamily: "'Inter',sans-serif", fontWeight: 400, fontSize: 16, lineHeight: 1.72, color: "rgba(242,242,242,0.46)", margin: "0 0 22px 0", maxWidth: 440 }}>
-            Я независимый разработчик, занимаюсь созданием современных сайтов, цифровых продуктов и веб-приложений.
+            РЇ РЅРµР·Р°РІРёСЃРёРјС‹Р№ СЂР°Р·СЂР°Р±РѕС‚С‡РёРє, Р·Р°РЅРёРјР°СЋСЃСЊ СЃРѕР·РґР°РЅРёРµРј СЃРѕРІСЂРµРјРµРЅРЅС‹С… СЃР°Р№С‚РѕРІ, С†РёС„СЂРѕРІС‹С… РїСЂРѕРґСѓРєС‚РѕРІ Рё РІРµР±-РїСЂРёР»РѕР¶РµРЅРёР№.
           </p>
           <p style={{ fontFamily: "'Inter',sans-serif", fontWeight: 400, fontSize: 16, lineHeight: 1.72, color: "rgba(242,242,242,0.46)", margin: "0 0 64px 0", maxWidth: 440 }}>
-            Для меня важны не только код и функциональность, но и то, как продукт выглядит, ощущается и работает для пользователя.
+            Р”Р»СЏ РјРµРЅСЏ РІР°Р¶РЅС‹ РЅРµ С‚РѕР»СЊРєРѕ РєРѕРґ Рё С„СѓРЅРєС†РёРѕРЅР°Р»СЊРЅРѕСЃС‚СЊ, РЅРѕ Рё С‚Рѕ, РєР°Рє РїСЂРѕРґСѓРєС‚ РІС‹РіР»СЏРґРёС‚, РѕС‰СѓС‰Р°РµС‚СЃСЏ Рё СЂР°Р±РѕС‚Р°РµС‚ РґР»СЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ.
           </p>
 
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "32px 40px", paddingTop: 48, borderTop: "1px solid rgba(242,242,242,0.06)" }}>
             {stats.map(s => <StatItem key={s.label} target={s.target} suffix={s.suffix} label={s.label} active={on} />)}
             <div>
-              <div style={{ fontFamily: "'Inter',sans-serif", fontWeight: 900, fontSize: 40, letterSpacing: "-0.04em", lineHeight: 1, color: "#F2F2F2", marginBottom: 6 }}>∞</div>
-              <div style={{ fontFamily: "'Inter',sans-serif", fontWeight: 400, fontSize: 10, letterSpacing: "0.1em", color: "rgba(242,242,242,0.22)" }}>итераций до результата</div>
+              <div style={{ fontFamily: "'Inter',sans-serif", fontWeight: 900, fontSize: 40, letterSpacing: "-0.04em", lineHeight: 1, color: "#F2F2F2", marginBottom: 6 }}>в€ћ</div>
+              <div style={{ fontFamily: "'Inter',sans-serif", fontWeight: 400, fontSize: 10, letterSpacing: "0.1em", color: "rgba(242,242,242,0.22)" }}>РёС‚РµСЂР°С†РёР№ РґРѕ СЂРµР·СѓР»СЊС‚Р°С‚Р°</div>
             </div>
             <div>
               <div style={{ fontFamily: "'Inter',sans-serif", fontWeight: 900, fontSize: 40, letterSpacing: "-0.04em", lineHeight: 1, color: "#F2F2F2", marginBottom: 6 }}>1</div>
-              <div style={{ fontFamily: "'Inter',sans-serif", fontWeight: 400, fontSize: 10, letterSpacing: "0.1em", color: "rgba(242,242,242,0.22)" }}>человек → весь результат</div>
+              <div style={{ fontFamily: "'Inter',sans-serif", fontWeight: 400, fontSize: 10, letterSpacing: "0.1em", color: "rgba(242,242,242,0.22)" }}>С‡РµР»РѕРІРµРє в†’ РІРµСЃСЊ СЂРµР·СѓР»СЊС‚Р°С‚</div>
             </div>
           </div>
         </div>
@@ -569,7 +569,7 @@ function AboutSection() {
             />
             <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(5,5,5,0.5) 0%, transparent 50%)" }} />
             <div style={{ position: "absolute", bottom: 26, left: 26 }}>
-              <span style={{ fontFamily: "'Inter',sans-serif", fontWeight: 700, fontSize: 9, letterSpacing: "0.24em", color: "rgba(242,242,242,0.38)" }}>BEDNIN — DEVELOPER</span>
+              <span style={{ fontFamily: "'Inter',sans-serif", fontWeight: 700, fontSize: 9, letterSpacing: "0.24em", color: "rgba(242,242,242,0.38)" }}>BEDNIN вЂ” DEVELOPER</span>
             </div>
           </div>
           {/* Ghost frame */}
@@ -594,10 +594,10 @@ function StatItem({ target, suffix, label, active }: { target: number; suffix: s
 // PROCESS
 // ============================================================
 const PROCESS = [
-  { num: "01", title: "ЗАДАЧА", desc: "Разбираемся в бизнесе, продукте и целях проекта." },
-  { num: "02", title: "ДИЗАЙН", desc: "Определяем визуальное направление и пользовательский опыт." },
-  { num: "03", title: "РАЗРАБОТКА", desc: "Превращаем дизайн в быстрый адаптивный работающий продукт." },
-  { num: "04", title: "ЗАПУСК", desc: "Передаём готовый сайт и помогаем запустить его." },
+  { num: "01", title: "Р—РђР”РђР§Рђ", desc: "Р Р°Р·Р±РёСЂР°РµРјСЃСЏ РІ Р±РёР·РЅРµСЃРµ, РїСЂРѕРґСѓРєС‚Рµ Рё С†РµР»СЏС… РїСЂРѕРµРєС‚Р°." },
+  { num: "02", title: "Р”РР—РђР™Рќ", desc: "РћРїСЂРµРґРµР»СЏРµРј РІРёР·СѓР°Р»СЊРЅРѕРµ РЅР°РїСЂР°РІР»РµРЅРёРµ Рё РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёР№ РѕРїС‹С‚." },
+  { num: "03", title: "Р РђР—Р РђР‘РћРўРљРђ", desc: "РџСЂРµРІСЂР°С‰Р°РµРј РґРёР·Р°Р№РЅ РІ Р±С‹СЃС‚СЂС‹Р№ Р°РґР°РїС‚РёРІРЅС‹Р№ СЂР°Р±РѕС‚Р°СЋС‰РёР№ РїСЂРѕРґСѓРєС‚." },
+  { num: "04", title: "Р—РђРџРЈРЎРљ", desc: "РџРµСЂРµРґР°С‘Рј РіРѕС‚РѕРІС‹Р№ СЃР°Р№С‚ Рё РїРѕРјРѕРіР°РµРј Р·Р°РїСѓСЃС‚РёС‚СЊ РµРіРѕ." },
 ];
 
 function ProcessSection() {
@@ -605,8 +605,8 @@ function ProcessSection() {
   return (
     <section style={{ padding: "120px 48px", maxWidth: 1440, margin: "0 auto", borderBottom: "1px solid rgba(242,242,242,0.06)" }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 80, flexWrap: "wrap", gap: 24 }}>
-        <span style={{ fontFamily: "'Inter',sans-serif", fontWeight: 400, fontSize: 9, letterSpacing: "0.26em", color: "rgba(242,242,242,0.2)" }}>ПРОЦЕСС</span>
-        <h2 style={{ fontFamily: "'Inter',sans-serif", fontWeight: 900, fontSize: "clamp(40px,5.5vw,72px)", letterSpacing: "-0.04em", lineHeight: 0.9, color: "#F2F2F2", margin: 0 }}>КАК МЫ РАБОТАЕМ</h2>
+        <span style={{ fontFamily: "'Inter',sans-serif", fontWeight: 400, fontSize: 9, letterSpacing: "0.26em", color: "rgba(242,242,242,0.2)" }}>РџР РћР¦Р•РЎРЎ</span>
+        <h2 style={{ fontFamily: "'Inter',sans-serif", fontWeight: 900, fontSize: "clamp(40px,5.5vw,72px)", letterSpacing: "-0.04em", lineHeight: 0.9, color: "#F2F2F2", margin: 0 }}>РљРђРљ РњР« Р РђР‘РћРўРђР•Рњ</h2>
       </div>
       <div ref={ref as React.RefObject<HTMLDivElement>} style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 0 }} className="proc-grid">
         {PROCESS.map((s, i) => (
@@ -627,16 +627,16 @@ function ProcessSection() {
 function WhySection() {
   const { ref, on } = useReveal();
   const items = [
-    { title: "ДИЗАЙН + КОД", desc: "Один человек отвечает за весь результат." },
-    { title: "БЫСТРАЯ\nКОММУНИКАЦИЯ", desc: "Без длинной цепочки менеджеров и посредников." },
-    { title: "ФОКУС НА\nРЕЗУЛЬТАТ", desc: "Сайт должен решать бизнес-задачу, а не просто красиво выглядеть." },
+    { title: "Р”РР—РђР™Рќ + РљРћР”", desc: "РћРґРёРЅ С‡РµР»РѕРІРµРє РѕС‚РІРµС‡Р°РµС‚ Р·Р° РІРµСЃСЊ СЂРµР·СѓР»СЊС‚Р°С‚." },
+    { title: "Р‘Р«РЎРўР РђРЇ\nРљРћРњРњРЈРќРРљРђР¦РРЇ", desc: "Р‘РµР· РґР»РёРЅРЅРѕР№ С†РµРїРѕС‡РєРё РјРµРЅРµРґР¶РµСЂРѕРІ Рё РїРѕСЃСЂРµРґРЅРёРєРѕРІ." },
+    { title: "Р¤РћРљРЈРЎ РќРђ\nР Р•Р—РЈР›Р¬РўРђРў", desc: "РЎР°Р№С‚ РґРѕР»Р¶РµРЅ СЂРµС€Р°С‚СЊ Р±РёР·РЅРµСЃ-Р·Р°РґР°С‡Сѓ, Р° РЅРµ РїСЂРѕСЃС‚Рѕ РєСЂР°СЃРёРІРѕ РІС‹РіР»СЏРґРµС‚СЊ." },
   ];
   return (
     <section style={{ padding: "120px 48px", maxWidth: 1440, margin: "0 auto", borderBottom: "1px solid rgba(242,242,242,0.06)" }}>
       <div ref={ref as React.RefObject<HTMLDivElement>} style={{ opacity: on ? 1 : 0, transform: on ? "none" : "translateY(24px)", transition: "all .9s ease" }}>
         <h2 style={{ fontFamily: "'Inter',sans-serif", fontWeight: 900, fontSize: "clamp(64px,11vw,152px)", letterSpacing: "-0.055em", lineHeight: 0.85, color: "#F2F2F2", margin: "0 0 80px 0" }}>
-          НЕ ПРОСТО<br />
-          <span style={{ WebkitTextStroke: "2px rgba(242,242,242,0.16)", color: "transparent" }}>САЙТ.</span>
+          РќР• РџР РћРЎРўРћ<br />
+          <span style={{ WebkitTextStroke: "2px rgba(242,242,242,0.16)", color: "transparent" }}>РЎРђР™Рў.</span>
         </h2>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 0 }} className="why-grid">
           {items.map((it, i) => (
@@ -652,87 +652,6 @@ function WhySection() {
 }
 
 // ============================================================
-// DESIGN SYSTEM SECTION
-// ============================================================
-function DesignSystemSection() {
-  const { ref, on } = useReveal();
-  return (
-    <section style={{ padding: "120px 48px", maxWidth: 1440, margin: "0 auto", borderBottom: "1px solid rgba(242,242,242,0.06)" }}>
-      <div ref={ref as React.RefObject<HTMLDivElement>} style={{ opacity: on ? 1 : 0, transform: on ? "none" : "translateY(24px)", transition: "all .9s ease" }}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 80, flexWrap: "wrap", gap: 24 }}>
-          <span style={{ fontFamily: "'Inter',sans-serif", fontWeight: 400, fontSize: 9, letterSpacing: "0.26em", color: "rgba(242,242,242,0.2)" }}>DESIGN SYSTEM</span>
-          <h2 style={{ fontFamily: "'Inter',sans-serif", fontWeight: 900, fontSize: "clamp(36px,4.5vw,60px)", letterSpacing: "-0.04em", lineHeight: 0.9, color: "#F2F2F2", margin: 0 }}>КОМПОНЕНТЫ</h2>
-        </div>
-
-        {/* Typography scale */}
-        <div style={{ borderTop: "1px solid rgba(242,242,242,0.06)", paddingTop: 48, marginBottom: 64 }}>
-          <span style={{ fontFamily: "'Inter',sans-serif", fontWeight: 400, fontSize: 9, letterSpacing: "0.22em", color: "rgba(242,242,242,0.2)", display: "block", marginBottom: 32 }}>ТИПОГРАФИКА</span>
-          <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
-            {[
-              { label: "Display / 152px", size: "clamp(48px,8vw,96px)", weight: 900, text: "ЗАГОЛОВОК" },
-              { label: "Heading / 72px", size: "clamp(32px,5vw,56px)", weight: 900, text: "Раздел сайта" },
-              { label: "Subhead / 24px", size: 20, weight: 700, text: "Подзаголовок блока" },
-              { label: "Body / 16px", size: 15, weight: 400, text: "Основной текст страницы — читабельный и чистый." },
-              { label: "Label / 10px", size: 10, weight: 500, text: "МЕТКА · КАТЕГОРИЯ · ТЕГ" },
-            ].map(row => (
-              <div key={row.label} style={{ display: "flex", alignItems: "baseline", gap: 32, padding: "20px 0", borderBottom: "1px solid rgba(242,242,242,0.04)" }}>
-                <span style={{ fontFamily: "'Inter',sans-serif", fontWeight: 400, fontSize: 9, letterSpacing: "0.16em", color: "rgba(242,242,242,0.2)", minWidth: 130, flexShrink: 0 }}>{row.label}</span>
-                <span style={{ fontFamily: "'Inter',sans-serif", fontWeight: row.weight, fontSize: row.size, letterSpacing: typeof row.size === "number" && row.size <= 10 ? "0.18em" : "-0.03em", color: "#F2F2F2", lineHeight: 1 }}>{row.text}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Buttons */}
-        <div style={{ borderTop: "1px solid rgba(242,242,242,0.06)", paddingTop: 48, marginBottom: 64 }}>
-          <span style={{ fontFamily: "'Inter',sans-serif", fontWeight: 400, fontSize: 9, letterSpacing: "0.22em", color: "rgba(242,242,242,0.2)", display: "block", marginBottom: 32 }}>КНОПКИ</span>
-          <div style={{ display: "flex", gap: 16, flexWrap: "wrap", alignItems: "center" }}>
-            <BtnPrimary href="#">НАЧАТЬ ПРОЕКТ →</BtnPrimary>
-            <BtnGhost href="#">СМОТРЕТЬ РАБОТЫ →</BtnGhost>
-            <a href="#" style={{ fontFamily: "'Inter',sans-serif", fontWeight: 600, fontSize: 10, letterSpacing: "0.14em", color: "#F2F2F2", textDecoration: "none", borderBottom: "1px solid rgba(242,242,242,0.3)", paddingBottom: 3 }}>ТЕКСТОВАЯ ССЫЛКА →</a>
-          </div>
-        </div>
-
-        {/* Labels & tags */}
-        <div style={{ borderTop: "1px solid rgba(242,242,242,0.06)", paddingTop: 48, marginBottom: 64 }}>
-          <span style={{ fontFamily: "'Inter',sans-serif", fontWeight: 400, fontSize: 9, letterSpacing: "0.22em", color: "rgba(242,242,242,0.2)", display: "block", marginBottom: 32 }}>МЕТКИ И ТЕГИ</span>
-          <div style={{ display: "flex", gap: 10, flexWrap: "wrap", alignItems: "center" }}>
-            {["Дизайн", "Разработка", "UI/UX", "AI", "MVP", "Frontend", "CRM"].map(t => (
-              <span key={t} style={{ fontFamily: "'Inter',sans-serif", fontWeight: 500, fontSize: 9, letterSpacing: "0.14em", color: "rgba(242,242,242,0.32)", border: "1px solid rgba(242,242,242,0.08)", padding: "6px 12px" }}>{t}</span>
-            ))}
-            <div style={{ display: "flex", alignItems: "center", gap: 8, border: "1px solid rgba(242,242,242,0.08)", padding: "6px 14px" }}>
-              <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#4ade80", display: "block" }} />
-              <span style={{ fontFamily: "'Inter',sans-serif", fontWeight: 500, fontSize: 9, letterSpacing: "0.14em", color: "rgba(242,242,242,0.4)" }}>ОТКРЫТ ДЛЯ ПРОЕКТОВ</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Color palette */}
-        <div style={{ borderTop: "1px solid rgba(242,242,242,0.06)", paddingTop: 48 }}>
-          <span style={{ fontFamily: "'Inter',sans-serif", fontWeight: 400, fontSize: 9, letterSpacing: "0.22em", color: "rgba(242,242,242,0.2)", display: "block", marginBottom: 32 }}>ЦВЕТА</span>
-          <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
-            {[
-              { c: "#050505", l: "Background" },
-              { c: "#111111", l: "Surface" },
-              { c: "#1A1A1A", l: "Elevated" },
-              { c: "rgba(242,242,242,0.06)", l: "Border" },
-              { c: "rgba(242,242,242,0.25)", l: "Muted text" },
-              { c: "#F2F2F2", l: "Foreground" },
-              { c: "#4ade80", l: "Status" },
-            ].map(s => (
-              <div key={s.l}>
-                <div style={{ width: 56, height: 56, background: s.c, border: "1px solid rgba(242,242,242,0.1)", marginBottom: 8 }} />
-                <div style={{ fontFamily: "'Inter',sans-serif", fontWeight: 400, fontSize: 9, letterSpacing: "0.1em", color: "rgba(242,242,242,0.28)" }}>{s.l}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// ============================================================
 // CTA
 // ============================================================
 function CTASection() {
@@ -740,19 +659,19 @@ function CTASection() {
   return (
     <section id="contact" style={{ padding: "140px 48px 120px", maxWidth: 1440, margin: "0 auto", borderBottom: "1px solid rgba(242,242,242,0.06)" }}>
       <div ref={ref as React.RefObject<HTMLDivElement>} style={{ opacity: on ? 1 : 0, transform: on ? "none" : "translateY(32px)", transition: "all 1s ease" }}>
-        <span style={{ fontFamily: "'Inter',sans-serif", fontWeight: 400, fontSize: 10, letterSpacing: "0.26em", color: "rgba(242,242,242,0.22)", display: "block", marginBottom: 36 }}>ЕСТЬ ЗАДАЧА?</span>
+        <span style={{ fontFamily: "'Inter',sans-serif", fontWeight: 400, fontSize: 10, letterSpacing: "0.26em", color: "rgba(242,242,242,0.22)", display: "block", marginBottom: 36 }}>Р•РЎРўР¬ Р—РђР”РђР§Рђ?</span>
         <h2 style={{ fontFamily: "'Inter',sans-serif", fontWeight: 900, fontSize: "clamp(44px,9vw,130px)", letterSpacing: "-0.055em", lineHeight: 0.86, color: "#F2F2F2", margin: "0 0 88px 0" }}>
-          ДАВАЙТЕ<br />СДЕЛАЕМ ЕЁ<br />
-          <span style={{ WebkitTextStroke: "2px rgba(242,242,242,0.2)", color: "transparent" }}>КРАСИВОЙ.</span>
+          Р”РђР’РђР™РўР•<br />РЎР”Р•Р›РђР•Рњ Р•РЃ<br />
+          <span style={{ WebkitTextStroke: "2px rgba(242,242,242,0.2)", color: "transparent" }}>РљР РђРЎРР’РћР™.</span>
         </h2>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 32 }}>
-          <BtnPrimary href="https://t.me/bednin">ОБСУДИТЬ ПРОЕКТ →</BtnPrimary>
+          <BtnPrimary href="https://t.me/bednin">РћР‘РЎРЈР”РРўР¬ РџР РћР•РљРў в†’</BtnPrimary>
           <div style={{ display: "flex", gap: 44 }}>
             {[{ l: "Telegram", h: "https://t.me/bednin" }, { l: "Email", h: "mailto:hello@bednin.ru" }].map(c => (
               <a key={c.l} href={c.h} style={{ fontFamily: "'Inter',sans-serif", fontWeight: 400, fontSize: 14, color: "rgba(242,242,242,0.32)", textDecoration: "none", borderBottom: "1px solid transparent", paddingBottom: 2, transition: "color .2s, border-color .2s" }}
                 onMouseEnter={e => { e.currentTarget.style.color = "#F2F2F2"; e.currentTarget.style.borderColor = "rgba(242,242,242,0.4)"; }}
                 onMouseLeave={e => { e.currentTarget.style.color = "rgba(242,242,242,0.32)"; e.currentTarget.style.borderColor = "transparent"; }}>
-                {c.l} →
+                {c.l} в†’
               </a>
             ))}
           </div>
@@ -770,9 +689,9 @@ function Footer() {
     <footer style={{ maxWidth: 1440, margin: "0 auto", padding: "44px 48px" }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 24 }}>
         <div>
-          <div style={{ fontFamily: "'Inter',sans-serif", fontWeight: 900, fontSize: 13, letterSpacing: "0.12em", color: "#F2F2F2", marginBottom: 6 }}>BEDNIN®</div>
-          <div style={{ fontFamily: "'Inter',sans-serif", fontWeight: 400, fontSize: 10, letterSpacing: "0.1em", color: "rgba(242,242,242,0.2)" }}>Независимый разработчик · digital studio</div>
-          <div style={{ fontFamily: "'Inter',sans-serif", fontWeight: 400, fontSize: 10, letterSpacing: "0.1em", color: "rgba(242,242,242,0.1)", marginTop: 3 }}>Сайты · Цифровые продукты · Разработка</div>
+          <div style={{ fontFamily: "'Inter',sans-serif", fontWeight: 900, fontSize: 13, letterSpacing: "0.12em", color: "#F2F2F2", marginBottom: 6 }}>BEDNINВ®</div>
+          <div style={{ fontFamily: "'Inter',sans-serif", fontWeight: 400, fontSize: 10, letterSpacing: "0.1em", color: "rgba(242,242,242,0.2)" }}>РќРµР·Р°РІРёСЃРёРјС‹Р№ СЂР°Р·СЂР°Р±РѕС‚С‡РёРє В· digital studio</div>
+          <div style={{ fontFamily: "'Inter',sans-serif", fontWeight: 400, fontSize: 10, letterSpacing: "0.1em", color: "rgba(242,242,242,0.1)", marginTop: 3 }}>РЎР°Р№С‚С‹ В· Р¦РёС„СЂРѕРІС‹Рµ РїСЂРѕРґСѓРєС‚С‹ В· Р Р°Р·СЂР°Р±РѕС‚РєР°</div>
         </div>
         <div style={{ display: "flex", gap: 40, alignItems: "center", flexWrap: "wrap" }}>
           {[{ l: "TELEGRAM", h: "https://t.me/bednin" }, { l: "EMAIL", h: "mailto:hello@bednin.ru" }].map(lk => (
@@ -781,7 +700,7 @@ function Footer() {
               onMouseLeave={e => (e.currentTarget.style.color = "rgba(242,242,242,0.22)")}
             >{lk.l}</a>
           ))}
-          <span style={{ fontFamily: "'Inter',sans-serif", fontWeight: 400, fontSize: 9, letterSpacing: "0.12em", color: "rgba(242,242,242,0.1)" }}>© 2026 BEDNIN</span>
+          <span style={{ fontFamily: "'Inter',sans-serif", fontWeight: 400, fontSize: 9, letterSpacing: "0.12em", color: "rgba(242,242,242,0.1)" }}>В© 2026 BEDNIN</span>
         </div>
       </div>
     </footer>
@@ -801,12 +720,11 @@ export default function App() {
         <Hero />
         <Strip items={["FULL-STACK DEVELOPMENT", "WEB DESIGN", "UI/UX", "MVP", "NEXT.JS", "REACT", "TYPESCRIPT", "DIGITAL PRODUCTS"]} />
         <WorkSection />
-        <Strip items={["ОТКРЫТ ДЛЯ ПРОЕКТОВ", "ДИЗАЙН + КОД", "БЫСТРЫЙ РЕЗУЛЬТАТ", "ФОКУС НА БИЗНЕС", "СТАРТАПЫ", "ПРЕДПРИНИМАТЕЛИ"]} reverse dim />
+        <Strip items={["РћРўРљР Р«Рў Р”Р›РЇ РџР РћР•РљРўРћР’", "Р”РР—РђР™Рќ + РљРћР”", "Р‘Р«РЎРўР Р«Р™ Р Р•Р—РЈР›Р¬РўРђРў", "Р¤РћРљРЈРЎ РќРђ Р‘РР—РќР•РЎ", "РЎРўРђР РўРђРџР«", "РџР Р•Р”РџР РРќРРњРђРўР•Р›Р"]} reverse dim />
         <ServicesSection />
         <AboutSection />
         <ProcessSection />
         <WhySection />
-        <DesignSystemSection />
         <CTASection />
       </main>
       <Footer />
